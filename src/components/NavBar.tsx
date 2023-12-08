@@ -165,7 +165,8 @@ const NavBar: React.FC = () => {
               )}
             </CustomNavLink>
           ))}
-          <LanguageSwitch />
+          {/* <LanguageSwitch /> */}
+          <ThemeSwitchButton />
         </nav>
       )}
     </React.Fragment>
