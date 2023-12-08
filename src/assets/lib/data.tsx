@@ -30,6 +30,10 @@ import nextjsiconwhite from "../../assets/icons/nextjsiconwhite.svg";
 import expressiconwhite from "../../assets/icons/expressiconwhite.svg";
 import { GoHome, GoPerson, GoMail, GoStack, GoProject } from "react-icons/go";
 import { FiGithub, FiLink, FiLinkedin, FiMail } from "react-icons/fi";
+import obbycoaching from "../../assets/img/obcoaching2edited.webp"
+import kidsinabox from "../../assets/img/2kids1boxedited.webp"
+import fampic from "../../assets/img/fampic2edited.webp"
+import obbyconference from "../../assets/img/obbyconferenceedited.webp"
 // import Imprint from "../../components/Imprint";
 // import Privacy from "../../components/Privacy";
 
@@ -141,6 +145,29 @@ export const projectsData = [
       icon: "white",
       projectcolor: "#E3964A",
     },
+  },
+] as const;
+
+// import obbycoaching from "../../assets/img/obcoaching2edited.webp"
+// import kidsinabox from "../../assets/img/2kids1boxedited.webp"
+// import fampic from "../../assets/img/fampic2edited.webp"
+// import obbyconference from "../../assets/img/obbyconferenceedited.webp"
+export const personalPictures = [
+  {
+    title: "What's the return policy at Amazon?",
+    image: kidsinabox
+  },
+  {
+    title: "Volunteering to teach kiddos BJJ",
+    image: obbycoaching
+  },
+  {
+    title: "Happy wife, happy life?",
+    image: fampic
+  },
+  {
+    title: "Speaking at a conference",
+    image: obbyconference
   },
 ] as const;
 

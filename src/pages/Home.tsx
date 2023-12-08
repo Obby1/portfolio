@@ -6,6 +6,7 @@ import { useTheme } from "../context/theme-context";
 import { ScrollProgress } from "../components/ScrollProgress";
 import Divider from "../components/Divider";
 import ProjectSlider from "../components/ProjectSlider";
+import PicturesComponent from '../components/PicturesComponent';
 
 const LazyBannerQuote = lazy(() => import("../components/BannerQuote"));
 const LazySiteBarRight = lazy(() => import("../components/SideBarRight"));
@@ -94,6 +95,14 @@ const Home: React.FC = () => {
                 color="lightblue"
                 height="middle"
                 dividerStyle="solid"
+              />
+              <PicturesComponent />
+              <Divider
+              thickness="0.25rem"
+              direction="middle-to-inner-left"
+              color="lightblue"
+              height="middle"
+              dividerStyle="solid"
               />
 
               <LazyContact />
