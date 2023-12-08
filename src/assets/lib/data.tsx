@@ -39,7 +39,7 @@ export const headerIntroData = {
   },
   subtitle: "Fullstack Developer ",
   description: {
-    en: "I'm Obby, a fullstack developer with the goal of advancing my career and building awesome web apps. My site here showcases my passion for web development and commitment to excellence. Let's build the future together!",
+    en: `I'm Obby, a Fullstack Developer with a passion for Frontend Development and AI. I love building with new technologies and I'm constantly challenging myself with new projects. Let's build the future together!`,
   },
   buttons: [
     {
@@ -350,7 +350,7 @@ export const contactData = {
     en: "Contact",
   },
   description: {
-    en: "Write me a message and I will get back to you.",
+    en: "Contact me on linked in or write me a message below.",
   },
   inputfields: [
     {
