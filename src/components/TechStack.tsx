@@ -7,7 +7,7 @@ import {
   skillsDataWeb,
 } from "../assets/lib/data";
 import { useTheme } from "../context/theme-context";
-import { useLanguage } from "../context/language-context";
+// import { useLanguage } from "../context/language-context";
 import SkillSection from "./SkillSection";
 import RadialGradient from "./RadialGradient";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -15,7 +15,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const TechStack: React.FC = () => {
   const { ref } = useSectionInView("Skills");
   const { theme } = useTheme();
-  const { language } = useLanguage();
+  // const { language } = useLanguage();
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: animationReference,
@@ -48,9 +48,7 @@ const TechStack: React.FC = () => {
               <span className="text-[--orange]">/&gt;</span>
             </p>
             <h2>
-              {language === "DE"
-                ? "Meine Techstack und Skills"
-                : "My TechStack and Skills"}
+              {"My TechStack and Skills"}
             </h2>
           </motion.div>
         </div>

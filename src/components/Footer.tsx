@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-darkblue flex justify-around items-center gap-10 p-10 max-lg:flex-col max-lg:pb-48 relative z-[1]">
-      <div className="flex gap-10">
+      {/* <div className="flex gap-10">
         {FooterLinks.map((link, index) => (
           <Popup
             trigger={
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                 to="#"
                 className="text-white text-2xl font-bold hover:text-orange"
               >
-                {language === "DE" ? link.de : link.en}
+                {link.en}
               </Link>
             }
             modal
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
             }
           </Popup>
         ))}
-      </div>
+      </div> */}
       <div className="socials flex gap-10 ">
         {sideBarLeftSocials.map((social: SocialLink, index: number) => (
           <Link
@@ -87,11 +87,11 @@ const Footer: React.FC = () => {
           </Link>
         ))}
       </div>
-      <div>
+      {/* <div>
         <Suspense fallback={<div>Loading...</div>}>
           <LazyServiceStatus />
         </Suspense>
-      </div>
+      </div> */}
     </footer>
   );
 };

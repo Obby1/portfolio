@@ -4,7 +4,7 @@ import axios from "axios";
 import { Highlight, themes } from "prism-react-renderer";
 import { contactData, toastMessages } from "../assets/lib/data.tsx";
 import { useSectionInView } from "../assets/lib/hooks";
-import { useLanguage } from "../context/language-context";
+// import { useLanguage } from "../context/language-context";
 import { ToastContainer, toast } from "react-toastify";
 import { useTheme } from "../context/theme-context";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
   const [cursor, setCursor] = useState<string>("");
   const [lastUpdatedField, setLastUpdatedField] = useState<string | null>(null);
   const { ref } = useSectionInView("Contact");
-  const { language } = useLanguage();
+  // const { language } = useLanguage();
   const { theme } = useTheme();
   const [error, setError] = useState<string | any>(null);
 
@@ -42,18 +42,10 @@ const Contact: React.FC = () => {
     try {
       const response = await axios.post(apiBaseUrl, data);
       console.log(response);
-      if (language === "DE") {
-        toast.success(toastMessages.successEmailSent.de);
-      } else {
-        toast.success(toastMessages.successEmailSent.en);
-      }
+      toast.success(toastMessages.successEmailSent.en);
     } catch (error) {
       console.log(error);
-      if (language === "DE") {
-        toast.error(toastMessages.failedEmailSent.de);
-      } else {
-        toast.error(toastMessages.failedEmailSent.en);
-      }
+      toast.error(toastMessages.failedEmailSent.en);
       setError("An Error occured, try again later");
     }
   };
@@ -148,7 +140,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
   // // 🚀 Initiating Quantum Email Transmission 🪐
   // const launchEmail = async () => {
   //   try {
-  //     const response = await fetch('https://alpaycelik.dev/send',{
+  //     const response = await fetch('https://obbydelrosario.com/send',{
   //     method: 'POST',
   //     headers: {'Content-Type': 'application/json'},
   //     body: JSON.stringify({
@@ -191,14 +183,12 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
           >
             <p className="text-[--black] mb-6">
               <span className="text-[--orange]">&lt;</span>
-              {language === "DE" ? contactData.title.de : contactData.title.en}
+              {contactData.title.en}
               <span className="text-[--orange]">/&gt;</span>
             </p>
 
             <h2 className="text-[--black] text-center">
-              {language === "DE"
-                ? contactData.description.de
-                : contactData.description.en}
+              {contactData.description.en}
             </h2>
           </motion.div>
         </div>
@@ -232,9 +222,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                 key={index}
                 type={input.type}
                 placeholder={
-                  language === "DE"
-                    ? `${input.placeholder.de}`
-                    : `${input.placeholder.en}`
+                  `${input.placeholder.en}`
                 }
                 name={input.name}
                 value={
@@ -266,9 +254,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
             <textarea
               rows={contactData.textarea.rows}
               placeholder={
-                language === "DE"
-                  ? `${contactData.textarea.placeholder.de}`
-                  : `${contactData.textarea.placeholder.en}`
+                `${contactData.textarea.placeholder.en}`
               }
               name={contactData.textarea.name}
               onFocus={() => {
@@ -300,21 +286,15 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                 <span className="checkbox"></span>
               </label>
               <p>
-                {language === "DE"
-                  ? `${contactData.privacyOptIn.checkbox.de}`
-                  : `${contactData.privacyOptIn.checkbox.en}`}
+                {`${contactData.privacyOptIn.checkbox.en}`}
               </p>
             </div>
             <p>
-              {language === "DE"
-                ? `${contactData.privacyOptIn.description.de}`
-                : `${contactData.privacyOptIn.description.en}`}
+              {`${contactData.privacyOptIn.description.en}`}
             </p>
             <Button
               value={
-                language === "DE"
-                  ? `${contactData.button.value.de}`
-                  : `${contactData.button.value.en}`
+                `${contactData.button.value.en}`
               }
               iconSVG={contactData.icon}
               buttoncolor={contactData.colors.main}
