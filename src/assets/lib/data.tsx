@@ -43,7 +43,8 @@ export const headerIntroData = {
   },
   subtitle: "Fullstack Developer ",
   description: {
-    en: `I'm Obby, a Fullstack Developer with a passion for Frontend Development and AI. I love building with new technologies and I'm constantly challenging myself with new projects. Let's build the future together!`,
+    // en: `I'm Obby, a Fullstack Developer with a passion for Frontend Development and AI. I love building with new technologies and I'm constantly challenging myself with new projects. Let's build the future together!`,
+    en: `I'm Obby, a Fullstack Developer with a passion for Frontend Development and AI. I love building with new technologies and I'm constantly challenging myself with new projects. The best way to grow is by building, so let's build!`,
   },
   buttons: [
     {
@@ -94,7 +95,7 @@ export const projectsData = [
   {
     title: "Mindful Path",
     description_EN:
-      "Beta release of an AI empowered mental health web app. Features include counseling, journaling, meditation, & more. I built this app across the stack to explore the possibilities of AI. Frontend is built with React, backend is built with NodeJS. JWT is used for IAM authentication.",
+      "An AI empowered mentorship app. Features include voice activated AI interactions, custom AI models, and 3D modeling. I built this app across the stack to explore the possibilities of AI. Frontend is built with React, backend is built with NodeJS. JWT is used for IAM authentication.",
     technologies: [
       { name: "Html", icon: htmlicon },
       { name: "CSS", icon: cssicon },
